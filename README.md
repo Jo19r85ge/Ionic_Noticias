@@ -1,2 +1,2 @@
 # Ionic_Noticias
-App ANdroid
+App android noticias. Api noticias USA.
