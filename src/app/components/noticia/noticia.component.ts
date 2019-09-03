@@ -28,35 +28,4 @@ export class NoticiaComponent implements OnInit {
 
   }
 
- async lanzarMenu() {
-
-    const actionSheet = await this.actionSheetCtrl.create({
-      buttons: [
-        {
-          text: 'Compartir',
-          icon: 'share',
-          handler: () => {
-            console.log('Share clicked');
-        }
-      },
-        {
-          text: 'Favorito',
-          icon: 'star',
-          handler: () => {
-            console.log('Favorito');
-        }
-      },
-        {
-          text: 'Cancel',
-          icon: 'close',
-          role: 'cancel',
-          handler: () => {
-            console.log('Cancel clicked');
-        }
-      }]
-    });
-    await actionSheet.present();
-
-  }
-
 }
