@@ -3,6 +3,8 @@ import { Article } from '../../interfaces/interfaces';
 
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import { ActionSheetController } from '@ionic/angular';
+import { SocialSharing } from '@ionic-native/social-sharing/ngx';
+
 
 
 @Component({
@@ -16,7 +18,8 @@ export class NoticiaComponent implements OnInit {
   @Input() indice: number;
 
   constructor( private iab: InAppBrowser,
-               private actionSheetCtrl: ActionSheetController) { }
+               private actionSheetCtrl: ActionSheetController,
+               private socialSharing: SocialSharing ) { }
 
   ngOnInit() {
   }
@@ -28,4 +31,44 @@ export class NoticiaComponent implements OnInit {
 
   }
 
-}
+  async lanzarMenu() {
+
+    const actionSheet = await this.actionSheetCtrl.create({
+      buttons: [
+        {
+          text: 'Compartir',
+          icon: 'share',
+          cssClass: 'action-dark',
+          handler: () => {
+            console.log('Share clicked');
+            this.socialSharing.share(
+              this.noticia.title,
+              this.noticia.source.name,
+              '',
+              this.noticia.url
+            );
+        }
+      },
+        {
+          text: 'Agregar a favoritos',
+          icon: 'star',
+          cssClass: 'action-dark',
+          handler: () => {
+            console.log('Favorito');
+        }
+      },
+        {
+          text: 'Cancelar',
+          icon: 'close',
+          role: 'cancel',
+          cssClass: 'action-dark',
+          handler: () => {
+            console.log('Cancel clicked');
+        }
+      }]
+    });
+
+    await actionSheet.present();
+    }
+
+  }
