@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage';
 import { Article } from '../interfaces/interfaces';
+import { ConsoleReporter } from 'jasmine';
 
 
 @Injectable({
@@ -10,16 +11,32 @@ export class DataLocalService {
 
   noticias: Article[] = [];
 
-  constructor( private storage: Storage ) { }
+  constructor( private storage: Storage ) {
+
+    this.cargarFavoritos();
+
+   }
 
   guardarNoticia( noticia: Article ) {
 
-    this.noticias.unshift( noticia );
-    this.  storage.set('favoritos', this.noticias);
+    const existe = this.noticias.find( noti => noti.title === noticia.title );
+
+    if ( !existe ) {
+      this.noticias.unshift( noticia );
+      this.storage.set('favoritos', this.noticias );
+    }
 
   }
 
-  cargarFavoritos() {
+  async cargarFavoritos() {
+
+    const favoritos = await this.storage.get('favoritos');
+
+    if ( favoritos ) {
+      this.noticias = favoritos;
+    }
+
+    this.noticias = favoritos;
 
   }
 }
