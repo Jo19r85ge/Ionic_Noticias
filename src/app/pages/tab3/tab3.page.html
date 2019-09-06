@@ -8,6 +8,14 @@
 
 <ion-content color="dark">
 
-  <app-noticias [noticias]="datalocalService.noticias"></app-noticias>
-  
+  <ion-slides>
+    <ion-slide>
+      <ion-label>No hay favoritos</ion-label>
+    </ion-slide>
+  </ion-slides>
+
+  <app-noticias
+                [noticias]="datalocalService.noticias">
+  </app-noticias>
+
 </ion-content>
