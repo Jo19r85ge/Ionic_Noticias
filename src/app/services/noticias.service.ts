@@ -13,6 +13,7 @@ const headers = new HttpHeaders({
 @Injectable({
   providedIn: 'root'
 })
+
 export class NoticiasService {
 
   headlinesPage = 0;
