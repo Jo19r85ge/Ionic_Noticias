@@ -20,7 +20,6 @@ import { IonicStorageModule } from '@ionic/storage';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
@@ -28,7 +27,6 @@ import { IonicStorageModule } from '@ionic/storage';
     HttpClientModule,
     IonicStorageModule.forRoot()
   ],
-
   providers: [
     StatusBar,
     SplashScreen,
@@ -36,7 +34,6 @@ import { IonicStorageModule } from '@ionic/storage';
     SocialSharing,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
-
   bootstrap: [AppComponent]
 })
 export class AppModule {}

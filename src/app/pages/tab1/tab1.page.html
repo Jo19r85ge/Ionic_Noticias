@@ -1,22 +1,21 @@
-<ion-header np-border>
+<ion-header no-border>
   <ion-toolbar color="dark">
     <ion-title>
-      Noticias
+      Fernando's News
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content color="dark">
   
- <app-noticias [noticias]="noticias"></app-noticias>
+  <app-noticias [noticias]="noticias"></app-noticias>
 
- <ion-infinite-scroll threshold="150px" 
-                      (ionInfinite)="loadData( $event )">
-   <ion-infinite-scroll-content loadingSpinner="crescent" 
-                                loadingText="Cargando data...">
-   </ion-infinite-scroll-content>
- </ion-infinite-scroll>
 
+  <ion-infinite-scroll threshold="150px" 
+                       (ionInfinite)="loadData( $event )">
+    <ion-infinite-scroll-content loadingSpinner="crescent"
+                                 loadingText="Cargando data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 
 </ion-content>
-

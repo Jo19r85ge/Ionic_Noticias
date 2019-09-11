@@ -1,4 +1,3 @@
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NoticiaComponent } from './noticia.component';
@@ -9,8 +8,7 @@ describe('NoticiaComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NoticiaComponent ],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA],
+      declarations: [ NoticiaComponent ]
     })
     .compileComponents();
   }));
