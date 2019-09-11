@@ -10,7 +10,7 @@ import { Article } from '../../interfaces/interfaces';
 })
 export class Tab2Page implements OnInit {
 
-  @ViewChild(IonSegment) segment: IonSegment;
+  @ViewChild(IonSegment, {static: true}) segment: IonSegment;
 
   categorias = ['business', 'entertainment', 'general', 'health', 'science', 'sports', 'technology', ];
   noticias: Article[] = [];
