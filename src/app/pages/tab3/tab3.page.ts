@@ -13,7 +13,6 @@ export class Tab3Page {
     allowSlideNext: false
   };
 
-
   constructor( public datalocalService: DataLocalService ) {
 
   }
