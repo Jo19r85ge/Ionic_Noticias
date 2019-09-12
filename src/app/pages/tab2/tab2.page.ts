@@ -15,11 +15,9 @@ export class Tab2Page implements OnInit {
   categorias = ['business', 'entertainment', 'general', 'health', 'science', 'sports', 'technology', ];
   noticias: Article[] = [];
 
-
   constructor( private noticiasService: NoticiasService ) {
 
   }
-
 
   ngOnInit() {
     this.segment.value = this.categorias[0];
