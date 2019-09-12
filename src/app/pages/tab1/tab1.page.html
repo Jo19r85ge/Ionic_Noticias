@@ -1,15 +1,16 @@
 <ion-header no-border>
   <ion-toolbar color="dark">
+
     <ion-title>
       Noticias última hora
     </ion-title>
+    
   </ion-toolbar>
 </ion-header>
 
 <ion-content color="dark">
   
   <app-noticias [noticias]="noticias"></app-noticias>
-
 
   <ion-infinite-scroll threshold="150px" 
                        (ionInfinite)="loadData( $event )">
