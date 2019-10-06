@@ -8,6 +8,7 @@ import { Article } from '../../interfaces/interfaces';
   templateUrl: 'tab2.page.html',
   styleUrls: ['tab2.page.scss']
 })
+
 export class Tab2Page implements OnInit {
 
   @ViewChild(IonSegment, {static: true}) segment: IonSegment;
