@@ -9,7 +9,6 @@
 </ion-header>
 
 <ion-content color="dark">
-
   <ion-slides [options]="sliderOpts"
               *ngIf="datalocalService.noticias.length === 0">
     <ion-slide>
@@ -23,5 +22,4 @@
                 [enFavoritos]="true"
                 [noticias]="datalocalService.noticias" >
   </app-noticias>
-
 </ion-content>
