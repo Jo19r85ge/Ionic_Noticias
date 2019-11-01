@@ -20,16 +20,15 @@ export class Tab2Page implements OnInit {
 
   }
 
-  ngOnInit() {
+  ngOnInit() 
+  {
     this.segment.value = this.categorias[0];
-
     this.cargarNoticias( this.categorias[0] );
   }
 
   cambioCategoria( event ) {
 
     this.noticias = [];
-
     this.cargarNoticias( event.detail.value );
 
   }
