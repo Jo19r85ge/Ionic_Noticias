@@ -7,7 +7,8 @@ import { Tab2Page } from './tab2.page';
 import { ComponentsModule } from '../../components/components.module';
 
 @NgModule({
-  imports: [
+  imports: 
+  [
     IonicModule,
     CommonModule,
     FormsModule,
