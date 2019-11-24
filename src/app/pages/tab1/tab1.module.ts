@@ -18,4 +18,5 @@ import { ComponentsModule } from '../../components/components.module';
   ],
   declarations: [Tab1Page]
 })
+
 export class Tab1PageModule {}
