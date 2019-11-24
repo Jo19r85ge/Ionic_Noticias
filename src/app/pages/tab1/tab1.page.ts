@@ -39,6 +39,7 @@ export class Tab1Page implements OnInit {
           event.target.complete();
           return;
         }
+      
 
         // this.noticias = resp.articles;
         this.noticias.push( ...resp.articles );
