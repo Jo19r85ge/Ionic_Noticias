@@ -46,6 +46,7 @@ export class Tab2Page implements OnInit {
           });
   }
 
+  
   loadData( event ) {
 
     this.cargarNoticias( this.segment.value, event );
