@@ -3,14 +3,12 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { RespuestaTopHeadlines } from '../interfaces/interfaces';
 import { environment } from '../../environments/environment';
 
-
 const apiKey = environment.apiKey;
 const apiUlr = environment.apiUlr;
 
 const headers = new HttpHeaders({
   'X-Api-key': apiKey
 });
-
 
 @Injectable({
   providedIn: 'root'
@@ -33,7 +31,6 @@ export class NoticiasService {
 
   }
 
-
   getTopHeadlines() {
 
     this.headlinesPage++;
@@ -53,11 +50,9 @@ export class NoticiasService {
       this.categoriaActual = categoria;
     }
 
-
     // return this.http.get(`https://newsapi.org/v2/top-headlines?country=de&category=business&apiKey=dc62b49904694e81adf392d7e45a2365`);
 
     return this.ejecutarQuery<RespuestaTopHeadlines>(`/top-headlines?country=us&category=${ categoria }&page=${ this.categoriaPage }`);
-
 
   }
 
